@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<style media="screen">
+h2{
+   text-align: center;
+}
+  .container{
+       max-width:350px;
+       border-radius: 5px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background: linear-gradient(rgb(47, 150, 163),rgb(48,62,143));
+      margin-top: 60px;
+      padding: 25px;
+  }
+  body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1a1a1a;
+    font-family: cursive;
+    color: white;
+  }
+  button{
+    margin-left: 103px;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Iris Class Prediction</h2>
+  <br>
+  <form action="/predict" method="post">
+    <div class="form-group">
+      <label for="sepallength">Sepal Length</label>
+      <input type="number" class="form-control" placeholder="Enter sepal length" name="sepallength" step="any">
+    </div>
+    <div class="form-group">
+      <label for="sepalwidth">Sepal Width</label>
+      <input type="number" class="form-control"  placeholder="Enter sepal width" name="sepalwidth" step="any">
+    </div>
+    <div class="form-group">
+      <label for="sepalwidth">Sepal Width</label>
+      <input type="number" class="form-control"  placeholder="Enter petal length" name="petallength" step="any">
+    </div>
+    <div class="form-group">
+      <label for="petalwidth">Sepal Width</label>
+      <input type="number" class="form-control"  placeholder="Enter petal width" name="petalwidth" step="any">
+    </div>
+    <button type="submit" class="btn btn-default">Predict</button>
+  </form>
+</div>
+ <div > Iris Class : {{res}}</div>
+</body>
+</html>
